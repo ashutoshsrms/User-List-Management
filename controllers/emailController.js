@@ -1,5 +1,3 @@
-const User = require("../models/User");
-const transporter = require("../config/email");
 const emailService = require("../services/emailService");
 
 exports.sendEmailToList = async (req, res) => {
