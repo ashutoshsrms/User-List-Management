@@ -13,6 +13,12 @@ connectDB();
 
 app.use(express.json());
 
+//default route
+app.get("/", (req, res) => {
+  res.json({ message: "User List Management and Email Sending API is running." });
+});
+
+//Main routes
 app.use("/api", listRoutes);
 app.use("/api", userRoutes);
 app.use("/api", emailRoutes);
